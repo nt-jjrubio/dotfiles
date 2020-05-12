@@ -10,6 +10,11 @@ call plug#begin('~/.vim/plugged')
 	Plug 'mattn/emmet-vim'
 	Plug 'scrooloose/syntastic'
 	Plug 'alessioalex/syntastic-local-tslint.vim'
+"	Plug 'kien/ctrlp.vim'
+	Plug 'ayu-theme/ayu-vim'        
+        " Before install fzf (apt or brew)
+	Plug 'junegunn/fzf.vim'	
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
 set number
@@ -18,5 +23,12 @@ set nosmartindent
 set noautoindent
 set indentexpr=
 set mouse=a
+
+set termguicolors
+"let ayucolor="light"  " for light version of theme
+"let ayucolor="mirage" " for mirage version of theme
+let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
+
 autocmd VimEnter * NERDTree
 
