@@ -1,13 +1,42 @@
-syntax on
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set ai
-set number
-set hlsearch
-set ruler
-highlight Comment ctermfg=green
+" set expandtab
+" set ai
+" set hlsearch
+" highlight Comment ctermfg=green
 
+" Activar colores
+syntax on
+
+" Los tabs se convierten en 2 espacios
+set shiftwidth=2
+
+" Ver numeros de linea
+set number
+
+" Ver regla
+set ruler
+
+" Ver siempre la barra de estado
+set laststatus=2
+
+" Ver comando que se esta ejecutando
+set showcmd
+
+" Portapapeles compartido
+set clipboard=unnamed
+
+" Activar mouse en modo añadir
+set mouse=a
+
+" Codificacion en utf-8
+" set encoding=utf-8
+
+" Ver parentesis correspondiente
+set showmatch
+
+" Ver numeros de linea relativos (0 linea del cursor)
+" set relativenumber
+
+" Vundle
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
