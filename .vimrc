@@ -23,6 +23,8 @@ set showcmd
 
 " Portapapeles compartido
 set clipboard=unnamed
+" Si no funciona el copiar en linux instalar vim-gui-common
+" set clipboard=unnamedplus
 
 " Activar mouse en modo añadir
 set mouse=a
