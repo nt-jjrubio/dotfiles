@@ -72,7 +72,7 @@ Plugin 'morhetz/gruvbox'
 
 " JSHint Plugin
 Plugin 'wookiehangover/jshint.vim'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
