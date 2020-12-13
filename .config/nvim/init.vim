@@ -3,35 +3,34 @@ filetype plugin indent off
 
 call plug#begin('~/.vim/plugged')
   
-  Plug 'stephpy/vim-yaml'
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
-	Plug 'preservim/nerdtree'
-  Plug 'editorconfig/editorconfig-vim'
-	Plug 'mattn/emmet-vim'
-	Plug 'scrooloose/syntastic'
-	Plug 'alessioalex/syntastic-local-tslint.vim'
-  "	Plug 'kien/ctrlp.vim'
-	Plug 'ayu-theme/ayu-vim'
-	
-  " Theme 
-	Plug 'morhetz/gruvbox'	
-  
-  " Before install fzf (apt or brew)
-	Plug 'junegunn/fzf.vim'	
-	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'stephpy/vim-yaml'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'preservim/nerdtree'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'mattn/emmet-vim'
+Plug 'scrooloose/syntastic'
+Plug 'alessioalex/syntastic-local-tslint.vim'
+" Plug 'kien/ctrlp.vim'
+Plug 'ayu-theme/ayu-vim'
+" Theme 
+Plug 'morhetz/gruvbox'	
 
-  " TypeScript Syntax Highlighting
-  Plug 'HerringtonDarkholme/yats.vim'
-  
-  " Intellisense for TypeScript  (To install tslint run CocInstall coc-tslint)
-  Plug 'neoclide/coc.nvim', {'branch' : 'release'}
+" Before install fzf (apt or brew)
+Plug 'junegunn/fzf.vim'	
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
-  " Git Integration for NERDTree
-  Plug 'Xuyuanp/nerdtree-git-plugin'
+" TypeScript Syntax Highlighting
+Plug 'HerringtonDarkholme/yats.vim'
 
-  " Match tags start / end
-  Plug 'gregsexton/matchtag'
+" Intellisense for TypeScript  (To install tslint run CocInstall coc-tslint)
+Plug 'neoclide/coc.nvim', {'branch' : 'release'}
+
+" Git Integration for NERDTree
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" Match tags start / end
+Plug 'gregsexton/matchtag'
 
 
 
