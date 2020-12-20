@@ -9,8 +9,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
-Plug 'scrooloose/syntastic'
-Plug 'alessioalex/syntastic-local-tslint.vim'
+" Plug 'scrooloose/syntastic'
+" Plug 'alessioalex/syntastic-local-tslint.vim'
 " Plug 'kien/ctrlp.vim'
 Plug 'ayu-theme/ayu-vim'
 " Theme 
@@ -23,8 +23,12 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " TypeScript Syntax Highlighting
 Plug 'HerringtonDarkholme/yats.vim'
 
-" Intellisense for TypeScript  (To install tslint run CocInstall coc-tslint)
+" Intellisense for TypeScript
 Plug 'neoclide/coc.nvim', {'branch' : 'release'}
+" (After plugin install, run: CocInstall coc-tsserver)
+Plug 'neoclide/coc-tsserver'
+" (After plugin install, run: CocInstall coc-tslint)
+Plug 'neoclide/coc-tslint'
 
 " Git Integration for NERDTree
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -158,6 +162,7 @@ endfunction
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+" Default leader key is \
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 
