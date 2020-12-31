@@ -50,7 +50,7 @@ window:
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
   #decorations: full
-  decorations: buttonless
+  #decorations: buttonless
   # Startup Mode (changes require restart)
   #
   # Values for `startup_mode`:
@@ -330,11 +330,11 @@ background_opacity: 0.8
 #    - --login
 
 shell:
-  program: /bin/zsh
+  program: /bin/bash
   args:
    - -l
    - -c
-   - "tmux -u"
+   - "tmux attach || tmux"
 # Startup directory
 #
 # Directory the shell is started in. If this is unset, or `None`, the working
