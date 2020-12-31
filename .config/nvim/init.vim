@@ -53,7 +53,7 @@ set expandtab
 set ai
 
 set termguicolors
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 "" Searching
 set hlsearch                    " highlight matches
