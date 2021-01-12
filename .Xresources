@@ -1,0 +1,7 @@
+! Themes: git clone https://github.com/logico-dev/Xresources-themes.git
+! To apply this file run: xrdb .Xresources
+
+URxvt.depth: 32
+URxvt.background: rgba:1111/1111/1111/dddd
+URxvt.font: xft:Ubuntu Mono:pixelsize=20
+#include "/home/d4rkh0s7/Xresources-themes/pop_os.Xresources"
