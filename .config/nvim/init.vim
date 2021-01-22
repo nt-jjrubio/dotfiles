@@ -40,7 +40,10 @@ Plug 'gregsexton/matchtag'
 
 call plug#end()
 
+" turn hybrid line numbers on
 set relativenumber
+set nu rnu
+
 set nocindent
 set nosmartindent
 set noautoindent
