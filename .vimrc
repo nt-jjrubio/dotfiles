@@ -10,7 +10,11 @@ syntax on
 set shiftwidth=2
 
 " Ver numeros de linea
-set number
+" set number
+
+" turn hybrid line numbers on
+set relativenumber
+set nu rnu
 
 " Ver regla
 set ruler
