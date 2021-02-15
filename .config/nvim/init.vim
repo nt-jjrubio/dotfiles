@@ -36,6 +36,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Match tags start / end
 Plug 'gregsexton/matchtag'
 
+" Dockerfiles
+Plug 'ekalinin/dockerfile.vim'
 
 
 call plug#end()
