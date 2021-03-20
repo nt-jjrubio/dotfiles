@@ -10,3 +10,7 @@ To open fzf
 First install **ripgrep**
 
 ``` :Rg ``` 
+
+## Install script from Ubuntu
+
+``` wget -O - https://raw.githubusercontent.com/nt-jjrubio/dotfiles/master/startup.sh | bash ```
