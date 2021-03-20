@@ -11,6 +11,6 @@ First install **ripgrep**
 
 ``` :Rg ``` 
 
-## Install script from Ubuntu
+## Install script for Ubuntu
 
 ``` wget -O - https://raw.githubusercontent.com/nt-jjrubio/dotfiles/master/startup.sh | bash ```
