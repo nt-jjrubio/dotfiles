@@ -3,6 +3,7 @@ filetype plugin indent off
 
 call plug#begin('~/.vim/plugged')
   
+Plug 'jremmen/vim-ripgrep' "Install ripgrep
 Plug 'stephpy/vim-yaml'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
