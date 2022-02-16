@@ -7,7 +7,9 @@
 syntax on
 
 " Los tabs se convierten en 2 espacios
-set shiftwidth=2
+set autoindent
+set smartindent
+set expandtab tabstop=2 shiftwidth=2 smarttab softtabstop=2
 
 " Ver numeros de linea
 " set number
