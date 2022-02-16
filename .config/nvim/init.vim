@@ -1,6 +1,11 @@
 filetype indent off
 filetype plugin indent off
 
+" Tabs settings
+" set autoindent
+" set smartindent
+" set expandtab tabstop=2 shiftwidth=2 smarttab softtabstop=2
+
 call plug#begin('~/.vim/plugged')
   
 Plug 'jremmen/vim-ripgrep' "Install ripgrep
