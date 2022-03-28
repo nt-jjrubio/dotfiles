@@ -22,7 +22,8 @@ Plug 'ayu-theme/ayu-vim'
 " Theme 
 Plug 'morhetz/gruvbox'	
 
-" Before install fzf (apt or brew)
+" Before install fzf and Ag (apt or brew)
+" FZF Find Files, Ag Grep Files (Alternative to RipGrep)
 Plug 'junegunn/fzf.vim'	
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
@@ -44,6 +45,17 @@ Plug 'gregsexton/matchtag'
 
 " Dockerfiles
 Plug 'ekalinin/dockerfile.vim'
+
+" Go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+Plug 'alvan/vim-closetag'
+
+" To view file changes +
+Plug 'mhinz/vim-signify'
+
+" View indented lines
+Plug 'yggdroot/indentline'
 
 
 call plug#end()
