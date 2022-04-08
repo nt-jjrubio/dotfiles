@@ -57,6 +57,11 @@ Plug 'mhinz/vim-signify'
 " View indented lines
 Plug 'yggdroot/indentline'
 
+" BufferLine
+Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
+" Plug 'ryanoasis/vim-devicons' Icons without colours
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+
 
 call plug#end()
 
@@ -97,12 +102,17 @@ colorscheme gruvbox
 "let ayucolor="mirage" " for mirage version of theme
 "let ayucolor="dark"   " for dark version of theme
 
-"""autocmd VimEnter * NERDTree
-" nmap <C-M> :NERDTreeToggle<CR>
+" ################## bufferline ######################
+" set termguicolors
+lua << EOF
+require("bufferline").setup{}
+EOF
 
 " ################### NERDTree #######################
 " Show hidden files
 let NERDTreeShowHidden=1
+"""autocmd VimEnter * NERDTree
+nmap <C-M> :NERDTreeToggle<CR>
 
 
 " ##################### COC ##########################
