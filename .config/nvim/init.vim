@@ -56,6 +56,9 @@ Plug 'mhinz/vim-signify'
 
 " View indented lines
 Plug 'yggdroot/indentline'
+let g:vim_json_conceal=0
+let g:markdown_syntax_conceal=0
+"let g:indentLine_enabled = 0
 
 " BufferLine
 Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
