@@ -1,31 +1,33 @@
-#!/bin/zsh
+#!/bin/bash
+sudo apt update
+sudo apt upgrade
 
-# Install packages
-sudo apt install git zsh tmux curl neovim fzf
+sudo apt install htop tmux neovim fzf silversearcher-ag git build-essential flatpak gnome-software-plugin-flatpak fish curl exa
 
-# Install ohmyzsh
-if [[ ! -d ~/.oh-my-zsh ]]
-then
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
+echo "Instalando omf..."
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 
-# Install nodejs
-curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-sudo apt-get install -y nodejs
+fish -c "omf install bobthefish"
+fish -c "omf install bass"
 
-# Clone dotfiles
-git clone https://github.com/nt-jjrubio/dotfiles.git
-
-# Install Plugged
+echo "Instalando vim-plug"
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-# Copy dotfiles
-cp ./dotfiles/.tmux.conf ~/
-cp ./dotfiles/.alacritty.yml ~/
-cp -R ./dotfiles/.config/ ~/
+echo "Instalando nvm"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
-# Install neovim pluggins
+echo "Copiando dotfiles..."
+git clone https://github.com/nt-jjrubio/dotfiles.git /tmp/dotfiles/
+cp /tmp/dotfiles/.tmux.conf ~
+cp -R /tmp/dotfiles/nvim ~/.config/
+cp -R /tmp/dotfiles/fish/functions/* ~/.config/fish/functions/
+echo "load_nvm > /dev/stderr" >> ~/.config/fish/config.fish
+
+echo "Instalando nvim plugins"
 nvim -c "PlugInstall" -c "qa!"
+
+echo "Cambiando shell por fish"
+chsh -s /usr/bin/fish
 
 echo -e "\e[33mInstalación terminada\e[0m"
