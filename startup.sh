@@ -2,7 +2,7 @@
 sudo apt update
 sudo apt upgrade
 
-sudo apt install htop tmux neovim fzf silversearcher-ag git build-essential flatpak gnome-software-plugin-flatpak fish curl exa
+sudo apt install htop tmux kitty neovim fzf silversearcher-ag git build-essential flatpak gnome-software-plugin-flatpak fish curl exa
 
 echo "Instalando omf..."
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
