@@ -17,9 +17,16 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 echo "Copiando dotfiles..."
 git clone https://github.com/nt-jjrubio/dotfiles.git /tmp/dotfiles/
 cp /tmp/dotfiles/.tmux.conf ~
+cp /tmp/dotfiles/.config/kitty/kitty.conf ~/.config/kitty/kitty.conf
 cp -R /tmp/dotfiles/.config/nvim ~/.config/
 cp -R /tmp/dotfiles/.config/fish/functions/* ~/.config/fish/functions/
 echo "load_nvm > /dev/stderr" >> ~/.config/fish/config.fish
+
+echo "Descargando nerdfont"
+sudo mkdir /usr/share/fonts/NerdFonts/
+wget -P /tmp/  https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CascadiaCode.zip
+sudo unzip /tmp/CascadiaCode.zip -d /usr/share/fonts/NerdFonts/
+sudo fc-cache -fv
 
 echo "Instalando nvim plugins"
 nvim -c "PlugInstall" -c "qa!"
