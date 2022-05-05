@@ -1,0 +1,9 @@
+configuration {
+    font: "Terminus (TTF) 12";
+    show-icons: true;
+    display-window: "Window";
+    display-drun: "Search";
+}
+
+@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+
