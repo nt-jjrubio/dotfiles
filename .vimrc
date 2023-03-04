@@ -13,6 +13,7 @@ set expandtab tabstop=2 shiftwidth=2 smarttab softtabstop=2
 
 " Ver numeros de linea
 " set number
+set number relativenumber
 
 " turn hybrid line numbers on
 set relativenumber
