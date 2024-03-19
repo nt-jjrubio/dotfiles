@@ -1,11 +1,6 @@
 filetype indent off
 filetype plugin indent off
 
-" Tabs settings
-" set autoindent
-" set smartindent
-" set expandtab tabstop=2 shiftwidth=2 smarttab softtabstop=2
-
 call plug#begin('~/.vim/plugged')
   
 Plug 'jremmen/vim-ripgrep' "Install ripgrep
@@ -15,63 +10,58 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
-" Plug 'scrooloose/syntastic'
-" Plug 'alessioalex/syntastic-local-tslint.vim'
+Plug 'scrooloose/syntastic'
+Plug 'alessioalex/syntastic-local-tslint.vim'
 " Plug 'kien/ctrlp.vim'
 Plug 'ayu-theme/ayu-vim'
 " Theme 
 Plug 'morhetz/gruvbox'	
 
-" Before install fzf and Ag (apt or brew)
-" FZF Find Files, Ag Grep Files (Alternative to RipGrep)
+" Before install fzf (apt or brew)
 Plug 'junegunn/fzf.vim'	
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " TypeScript Syntax Highlighting
 Plug 'HerringtonDarkholme/yats.vim'
 
-" Intellisense for TypeScript
+" Intellisense for TypeScript  (To install tslint run CocInstall coc-tslint)
 Plug 'neoclide/coc.nvim', {'branch' : 'release'}
 " (After plugin install, run: CocInstall coc-tsserver)
 Plug 'neoclide/coc-tsserver'
 " (After plugin install, run: CocInstall coc-tslint)
 Plug 'neoclide/coc-tslint'
-
 " Git Integration for NERDTree
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Match tags start / end
 Plug 'gregsexton/matchtag'
 
-" Dockerfiles
-Plug 'ekalinin/dockerfile.vim'
 
-" Go
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'ntk148v/vim-horizon'
 
-Plug 'alvan/vim-closetag'
+"Plug 'fatih/vim-go'
 
-" To view file changes +
-Plug 'mhinz/vim-signify'
-
-" View indented lines
+" Plug to view indent lines
 Plug 'yggdroot/indentline'
 let g:vim_json_conceal=0
 let g:markdown_syntax_conceal=0
 "let g:indentLine_enabled = 0
+
+
+" Plug to view modified lines
+Plug 'mhinz/vim-signify'
+
+Plug 'pechorin/any-jump.vim'
 
 " BufferLine
 Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
 " Plug 'ryanoasis/vim-devicons' Icons without colours
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 
-
 call plug#end()
 
-" turn hybrid line numbers on
 set relativenumber
 set nu rnu
-
 set nocindent
 set nosmartindent
 set noautoindent
@@ -98,7 +88,8 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme horizon
 
 "let g:gruvbox_contrast_dark = "hard"
 "let ayucolor="light"  " for light version of theme
@@ -116,7 +107,6 @@ EOF
 let NERDTreeShowHidden=1
 """autocmd VimEnter * NERDTree
 nmap <C-M> :NERDTreeToggle<CR>
-
 
 " ##################### COC ##########################
 " " TextEdit might fail if hidden is not set.
@@ -148,11 +138,11 @@ endif
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"inoremap <silent><expr> <TAB>
+"      \ pumvisible() ? "\<C-n>" :
+"      \ <SID>check_back_space() ? "\<TAB>" :
+"      \ coc#refresh()
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -198,7 +188,6 @@ endfunction
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Default leader key is \
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 
@@ -278,3 +267,6 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+
+
